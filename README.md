@@ -1,0 +1,2 @@
+- bash, zsh, fish `deno task stow -n fish -d $HOME/stow_dotfiles`
+- nushell `deno task stow -n fish -d $"($env.HOME)/stow_dotfiles"`

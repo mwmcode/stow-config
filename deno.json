@@ -1,0 +1,11 @@
+{
+  "tasks": {
+    "stow": "deno run --allow-env=HOME -R -W main.ts"
+  },
+  "imports": {
+    "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/cli": "jsr:@std/cli@^1.0.9",
+    "@std/path": "jsr:@std/path@^1.0.8"
+  }
+}
