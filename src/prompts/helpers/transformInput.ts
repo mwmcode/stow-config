@@ -8,11 +8,11 @@ export function transformInput(input: string) {
   }
   return input
     .split('/')
-    .map(chunk =>
+    .map((chunk) =>
       chunk.replace(
         /\$(\w+)/g,
         (_, variable) => Deno.env.get(variable) || `$${variable}`,
-      ),
+      )
     )
     .join('/');
 }

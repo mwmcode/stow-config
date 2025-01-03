@@ -12,8 +12,7 @@ function checkDefaultConfigsDirExists() {
 }
 
 export async function promptConfigDir() {
-  const useDefault =
-    checkDefaultConfigsDirExists() &&
+  const useDefault = checkDefaultConfigsDirExists() &&
     (await Toggle.prompt(`Use 📂 ${defaultConfigDir} to search for configs?`));
 
   if (useDefault) {
@@ -22,7 +21,7 @@ export async function promptConfigDir() {
   return await Input.prompt({
     files: true,
     message: 'Path path to `configs` directory',
-    validate: value => {
+    validate: (value) => {
       const sourceDir = transformInput(value);
       try {
         return Deno.lstatSync(sourceDir).isDirectory;

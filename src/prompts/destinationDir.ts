@@ -8,7 +8,7 @@ export async function promptDestinationDir() {
     message: 'Enter path to `destination` directory',
     hint: 'Location to move congis to?',
     transform: transformInput,
-    validate: async value => {
+    validate: async (value) => {
       const destDir = transformInput(value);
       try {
         return Deno.lstatSync(destDir).isDirectory;
