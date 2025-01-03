@@ -1,17 +1,26 @@
-import { validateArgs } from './src/validateArgs.ts';
-import { stowConfig } from './src/stowConfig.ts';
-import { executeCommand } from './src/command.ts';
+import { join } from '@std/path/join';
+import * as prompt from './src/prompts/index.ts';
 
 if (!import.meta.main) {
   console.error('This script must be run in standalone mode.');
   Deno.exit(1);
 }
 
-const { options, cmd } = await executeCommand();
+const configsDir = await prompt.promptConfigDir();
+const destinationDir = await prompt.promptDestinationDir();
 
-try {
-  const args = validateArgs(options);
-  await stowConfig(args);
-} catch (error) {
-  cmd.throw(error);
+const selectedConfigs = await prompt.pickConfigs(configsDir);
+console.log({
+  selectedConfigs,
+  configsDir,
+  destinationDir,
+});
+
+for (const config of selectedConfigs) {
+  const sourcePath = join(configsDir, config);
+  const targetPath = join(destinationDir, config);
+  // move config to target
+  await Deno.rename(sourcePath, targetPath);
+  // symlink it from target to configsDir
+  await Deno.symlink(targetPath, sourcePath);
 }
