@@ -10,11 +10,6 @@ const configsDir = await prompt.promptConfigDir();
 const destinationDir = await prompt.promptDestinationDir();
 
 const selectedConfigs = await prompt.pickConfigs(configsDir);
-console.log({
-  selectedConfigs,
-  configsDir,
-  destinationDir,
-});
 
 for (const config of selectedConfigs) {
   const sourcePath = join(configsDir, config);
@@ -24,3 +19,5 @@ for (const config of selectedConfigs) {
   // symlink it from target to configsDir
   await Deno.symlink(targetPath, sourcePath);
 }
+
+console.log('✅ done!');

@@ -5,11 +5,7 @@ export async function pickConfigs(configsDir: string) {
 
   for await (const { isSymlink, name } of Deno.readDir(configsDir)) {
     if (isSymlink) continue;
-    options.push({
-      icon: false,
-      name,
-      value: name,
-    });
+    options.push({ name, value: name });
   }
 
   return await Checkbox.prompt({
