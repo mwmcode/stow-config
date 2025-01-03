@@ -1,4 +1,8 @@
 {
+  "name": "@mcha/stow-config",
+  "version": "0.1.0-rc.1",
+  "license": "MIT",
+  "exports": "./main.ts",
   "tasks": {
     "stow": "deno run --allow-env=HOME -R -W main.ts"
   },

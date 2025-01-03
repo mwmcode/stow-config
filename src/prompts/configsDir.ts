@@ -1,5 +1,5 @@
 import { Input, Toggle } from '@cliffy/prompt';
-import { transformInput } from '../transformInput.ts';
+import { transformInput } from './helpers/transformInput.ts';
 
 const defaultConfigDir = `${Deno.env.get('HOME')}/.config`;
 

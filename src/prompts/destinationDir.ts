@@ -1,5 +1,5 @@
 import { Input } from '@cliffy/prompt';
-import { transformInput } from '../transformInput.ts';
+import { transformInput } from './helpers/transformInput.ts';
 import { confirmCreate } from './confirmCreate.ts';
 
 export async function promptDestinationDir() {

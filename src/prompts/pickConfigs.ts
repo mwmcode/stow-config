@@ -1,4 +1,5 @@
-import { Checkbox, CheckboxOption } from '@cliffy/prompt';
+import { Checkbox } from '@cliffy/prompt';
+import type { CheckboxOption } from '@cliffy/prompt';
 
 export async function pickConfigs(configsDir: string) {
   const options: CheckboxOption<string>[] = [];
