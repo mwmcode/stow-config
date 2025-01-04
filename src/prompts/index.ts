@@ -1,3 +1,3 @@
-export { promptConfigDir } from './configsDir.ts';
-export { promptDestinationDir } from './destinationDir.ts';
+export { enterConfigDir } from './configsDir.ts';
+export { enterDestinationDir } from './destinationDir.ts';
 export { pickConfigs } from './pickConfigs.ts';

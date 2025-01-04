@@ -1,13 +1,13 @@
 import { snapshotTest } from '@cliffy/testing';
 import { ansi } from '@cliffy/ansi';
-import { promptConfigDir } from '../src/prompts/index.ts';
+import { enterConfigDir } from '../src/prompts/index.ts';
 import { join } from '@std/path';
 import {
   TESTSC_HOME_ALTERNATIVE,
   TEST_DENO_ARGS,
   TestDirectories,
 } from '@/consts.ts';
-import { promptDestinationDir } from '@/src/prompts/destinationDir.ts';
+import { enterDestinationDir } from '@/src/prompts/destinationDir.ts';
 
 await snapshotTest({
   name: 'Prompt user to use default `$HOME/.config`',
@@ -16,7 +16,7 @@ await snapshotTest({
   denoArgs: TEST_DENO_ARGS,
   async fn() {
     Deno.env.set(TESTSC_HOME_ALTERNATIVE, join(Deno.cwd(), 'test/data'));
-    const answer = await promptConfigDir();
+    const answer = await enterConfigDir();
     console.log({ answer });
     Deno.env.delete(TESTSC_HOME_ALTERNATIVE);
   },
@@ -32,7 +32,7 @@ await snapshotTest({
   denoArgs: TEST_DENO_ARGS,
   async fn() {
     Deno.env.set(TESTSC_HOME_ALTERNATIVE, 'WRONG_DIR');
-    const answer = await promptConfigDir();
+    const answer = await enterConfigDir();
     console.log({ answer });
   },
 });
@@ -47,7 +47,7 @@ await snapshotTest({
   denoArgs: ['-R', '--allow-env=SNAPSHOT_TEST_NAME'],
   async fn() {
     Deno.env.set(TESTSC_HOME_ALTERNATIVE, TESTSC_HOME_ALTERNATIVE);
-    const answer = await promptDestinationDir();
+    const answer = await enterDestinationDir();
     console.log({ answer });
   },
 });

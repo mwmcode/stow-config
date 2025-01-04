@@ -2,7 +2,7 @@ import { Input, Toggle } from '@cliffy/prompt';
 import { transformInput } from './helpers/transformInput.ts';
 import { checkDefaultConfigsDir } from './helpers/checkDeafultConfigsDir.ts';
 
-export async function promptConfigDir() {
+export async function enterConfigDir() {
   const defaultDir = checkDefaultConfigsDir();
 
   if (

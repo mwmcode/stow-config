@@ -1,25 +1,50 @@
-import { Input } from '@cliffy/prompt';
-import { transformInput } from './helpers/transformInput.ts';
-import { confirmCreate } from './confirmCreate.ts';
+import { prompt, Input, Toggle } from '@cliffy/prompt';
 
-export async function promptDestinationDir() {
-  return await Input.prompt({
-    files: true,
-    message: 'Enter path to `destination` directory',
-    hint: 'Location to move congis to?',
-    transform: transformInput,
-    validate: async (value) => {
-      const destDir = transformInput(value);
-      try {
-        return Deno.lstatSync(destDir).isDirectory;
-      } catch (error) {
-        if (error instanceof Deno.errors.NotFound) {
-          return await confirmCreate(destDir);
-        } else {
+export async function enterDestinationDir() {
+  return await prompt([
+    {
+      name: 'destDir',
+      type: Input,
+      files: true,
+      message: 'Enter path to 📂 destination directory',
+      after: async ({ destDir }, next) => {
+        if (!destDir) {
+          return await next('destDir');
+        }
+        try {
+          if (Deno.lstatSync(destDir as string).isDirectory) {
+            return await next(null);
+          } else {
+            console.error(`\n${destDir} is not a directory 📂\n`);
+            return await next('destDir');
+          }
+        } catch (error) {
+          if (error instanceof Deno.errors.NotFound) {
+            console.info(`${destDir} does not exist`);
+            return await next('shouldCreateDestDir');
+          } else {
+            console.error(`\n${error}`);
+            Deno.exit(1);
+          }
+        }
+      },
+    },
+    {
+      name: 'shouldCreateDestDir',
+      message: 'Would you like to create it?',
+      type: Toggle,
+      after: async ({ shouldCreateDestDir, destDir }, next) => {
+        if (!shouldCreateDestDir) {
+          return await next('destDir');
+        }
+        try {
+          await Deno.mkdir(destDir as string, { recursive: true });
+          return await next();
+        } catch (error) {
           console.error(`\n${error}`);
           Deno.exit(1);
         }
-      }
+      },
     },
-  });
+  ]);
 }
