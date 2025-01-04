@@ -1,27 +1,20 @@
 import { Input, Toggle } from '@cliffy/prompt';
 import { transformInput } from './helpers/transformInput.ts';
-
-const defaultConfigDir = `${Deno.env.get('HOME')}/.config`;
-
-function checkDefaultConfigsDirExists() {
-  try {
-    return Deno.lstatSync(defaultConfigDir).isDirectory;
-  } catch {
-    return false;
-  }
-}
+import { checkDefaultConfigsDir } from './helpers/checkDeafultConfigsDir.ts';
 
 export async function promptConfigDir() {
-  const useDefault = checkDefaultConfigsDirExists() &&
-    (await Toggle.prompt(`Use 📂 ${defaultConfigDir} to search for configs?`));
+  const defaultDir = checkDefaultConfigsDir();
 
-  if (useDefault) {
-    return defaultConfigDir;
+  if (
+    defaultDir &&
+    (await Toggle.prompt(`Use 📂 ${defaultDir} to search for configs?`))
+  ) {
+    return defaultDir;
   }
   return await Input.prompt({
     files: true,
     message: 'Path path to `configs` directory',
-    validate: (value) => {
+    validate: value => {
       const sourceDir = transformInput(value);
       try {
         return Deno.lstatSync(sourceDir).isDirectory;
