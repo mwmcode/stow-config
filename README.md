@@ -4,28 +4,20 @@
 
 Like [GNU Stow](https://www.gnu.org/software/stow/)
 
-### Usage
 
-- install globally (`--global`)
-
+- install it
 ```sh
-deno install --global --allow-env=HOME -R -W --name stow-config jsr:@mcha/stow-config@latest
+deno install --global -R -W --allow-env=HOME --name stow jsr:@mcha/stow-config
 ```
+> `-R`, `-W` to move config files and create symlinks for them;
+> `--allow-env=HOME` to facilitate paths like `~/.config`
+> `--name stow` you can name it something else, like `--name stow-configs`)
 
-> `-R`, `-W` to read/write config files; `--allow-env=HOME` to read
-> `$HOME/.config`
 
-- make sure `$HOME/.deno/bin` is added to `$PATH`. In `bash` & `zsh`:
-
+- run it
+> make sure `$HOME/.deno/bin` is in `$PATH`:
 ```sh
-export PATH="/Users/mch/.deno/bin:$PATH"
-# restart shell/terminal
-```
-
-- run command
-
-```sh
-stow-config
+stow
 ```
 
 - TBC.
