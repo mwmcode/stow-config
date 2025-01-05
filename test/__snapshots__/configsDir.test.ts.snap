@@ -1,32 +1,61 @@
 export const snapshot = {};
 
-snapshot[`Prompt user to use default \`\$HOME/.config\` 1`] = `
+snapshot[`Prompts user to enter paths for source and destination dirs 1`] = `
 stdout:
-'{ testHomeDir: "/Users/mch/Developer/deno/stow-config/test/data" }
-? Use 📂 /Users/mch/Developer/deno/stow-config/test/data to search for configs? › No / Yes\\x1b[0G\\x1b[?25l\\x1b[G\\x1b[0J
-? Use 📂 /Users/mch/Developer/deno/stow-config/test/data to search for configs? › No / Yes\\x1b[0G\\x1b[?25l\\x1b[G\\x1b[0J
-? Use 📂 /Users/mch/Developer/deno/stow-config/test/data to search for configs? › Yes
-\\x1b[?25h\\x1b[?25h{ answer: "/Users/mch/Developer/deno/stow-config/test/data" }
-'
-stderr:
-""
-`;
+'? Enter path to \`configs\` directory › \\x1b[39G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch\\x1b[47G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer\\x1b[55G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno\\x1b[63G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config\\x1b[71G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test\\x1b[79G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[87G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[95G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src
+\\x1b[?25h\\x1b[?25h\\x1b[?25h
 
-snapshot[`Ask user to enter path to configs dir 1`] = `
-stdout:
-'{ testHomeDir: "WRONG_DIR" }
-? Path path to \`configs\` directory › \\x1b[38G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch\\x1b[46G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch/Developer\\x1b[54G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch/Developer/deno\\x1b[62G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch/Developer/deno/stow-config\\x1b[70G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test\\x1b[78G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[86G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[94G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[96G\\x1b[G\\x1b[0J
-? Path path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src
-\\x1b[?25h\\x1b[?25h{
-  answer: "/Users/mch/Developer/deno/stow-config/test/data/config-src"
+? Enter path to \`destination\` directory › \\x1b[43G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch\\x1b[51G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer\\x1b[59G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno\\x1b[67G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config\\x1b[75G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test\\x1b[83G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[91G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest\\x1b[99G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest
+\\x1b[?25h\\x1b[?25h\\x1b[?25h
+
+? Pick config file(s) Type to filter 🔎 
+❯ ✘ .testConfig1.json
+  ✘ testConfig2.toml
+  ✘ testConfig4
+  ✘ testConfig3.yaml\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+❯ ✔ .testConfig1.json
+  ✘ testConfig2.toml
+  ✘ testConfig4
+  ✘ testConfig3.yaml\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .testConfig1.json
+❯ ✘ testConfig2.toml
+  ✘ testConfig4
+  ✘ testConfig3.yaml\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .testConfig1.json
+❯ ✔ testConfig2.toml
+  ✘ testConfig4
+  ✘ testConfig3.yaml\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .testConfig1.json
+  ✔ testConfig2.toml
+❯ ✘ testConfig4
+  ✘ testConfig3.yaml\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) › .testConfig1.json, testConfig2.toml, testConfig4
+\\x1b[?25h\\x1b[?25h\\x1b[?25h{
+  result: {
+    configDir: "/Users/mch/Developer/deno/stow-config/test/data/config-src",
+    destDir: "/Users/mch/Developer/deno/stow-config/test/data/config-dest",
+    pickConfigs: [ ".testConfig1.json", "testConfig2.toml", "testConfig4" ]
+  }
 }
 '
 stderr:

@@ -1,39 +1,11 @@
-# Deno specific
-.env
-*.orig
-*.pyc
-*.swp
-.deno/*
-
-# MacOS specific
 .DS_Store
-.DS_Store?
-.AppleDouble
-.LSOverride
-._*
-
-# Dependencies
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Coverage and test files
-coverage/
-.nyc_output/
-.idea/
-.vscode/
-.vercel/
-
-dist
-testing/__snapshots__/snapshot_test_fixture.ts.snap
-testing/__snapshots__/snapshot_test_fixture_2.ts.snap
-__snapshots_test__
-
-# Node files
-node_modules
+.env
+.deno/*
 .npmrc
-bun.lockb
-package.json
-pnpm-lock.yaml
-tsconfig.json
+
+.vscode/
+!.vscode/settings.json
+
+node_modules
+
+test/data/*

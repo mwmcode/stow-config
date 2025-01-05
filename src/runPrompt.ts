@@ -48,19 +48,27 @@ export async function runPrompt() {
       files: true,
       message: logger.prompt('Enter path to `destination` directory'),
       transform: getFullPath,
-      after: async ({ destDir }, next) => {
+      after: async ({ destDir, configDir }, next) => {
         const dirValidation = validateDirInput(destDir as string);
-        if (dirValidation === 'is-directory') {
-          logger.emptyLine();
-          await next('pickConfigs');
+        if (destDir === configDir) {
+          logger.error(
+            `${logger.underline(
+              destDir,
+            )} cannot be the same as configs (source) directory`,
+          );
+          await next('destDir');
         }
         if (dirValidation === 'is-file') {
-          logger.error(`${destDir} must be a directory`);
+          logger.error(`${logger.underline(destDir)} must be a directory`);
           await next('destDir');
         }
         if (dirValidation === 'is-new') {
-          logger.info(`${destDir} does not exist yet.`);
+          logger.info(`${logger.underline(destDir)} does not exist yet.`);
           await next('shouldCreateDestDir');
+        }
+        if (dirValidation === 'is-directory') {
+          logger.emptyLine();
+          await next('pickConfigs');
         }
       },
     },
