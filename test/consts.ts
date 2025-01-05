@@ -6,9 +6,4 @@ export const SRC_DIR = join(Deno.cwd(), 'test/data/config-src');
 
 export const DEST_DIR = join(Deno.cwd(), 'test/data/config-dest');
 
-export const CONFIGS = [
-  '.testConfig1.json',
-  'testConfig2.toml',
-  'testConfig3.yaml',
-  'testConfig4/',
-];
+export const CONFIGS = ['.prettierrc.js', 'git/config', '.zshrc', 'starship.toml'];

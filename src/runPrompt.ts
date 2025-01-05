@@ -20,9 +20,11 @@ export async function runPrompt() {
         const configsDirFullpath = getFullPath(configDir);
         const dirValidatoin = validateDirInput(configDir);
         if (dirValidatoin === 'is-directory') {
-          for await (const { isSymlink, name } of Deno.readDir(
-            configsDirFullpath,
-          )) {
+          for await (
+            const { isSymlink, name } of Deno.readDir(
+              configsDirFullpath,
+            )
+          ) {
             if (isSymlink) continue;
             configFiles.push({ name, value: name });
           }
@@ -34,9 +36,11 @@ export async function runPrompt() {
           await next();
         } else if (['is-new', 'is-file'].includes(dirValidatoin)) {
           logger.error(
-            `No such directory (${logger.underline(
-              configDir,
-            )}). Please try again`,
+            `No such directory (${
+              logger.underline(
+                configDir,
+              )
+            }). Please try again`,
           );
           await next('configDir');
         }
@@ -52,9 +56,11 @@ export async function runPrompt() {
         const dirValidation = validateDirInput(destDir as string);
         if (destDir === configDir) {
           logger.error(
-            `${logger.underline(
-              destDir,
-            )} cannot be the same as configs (source) directory`,
+            `${
+              logger.underline(
+                destDir,
+              )
+            } cannot be the same as configs (source) directory`,
           );
           await next('destDir');
         }
