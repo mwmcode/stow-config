@@ -1,3 +1,5 @@
+[![Publish](https://github.com/mwmcode/stow-config/actions/workflows/publish.yml/badge.svg)](https://github.com/mwmcode/stow-config/actions/workflows/publish.yml)
+
 # Stow Config
 
 Like [GNU Stow](https://www.gnu.org/software/stow/)
@@ -19,7 +21,9 @@ deno install --global --allow-env=HOME -R -W --name stow-config jsr:@mcha/stow-c
 export PATH="/Users/mch/.deno/bin:$PATH"
 # restart shell/terminal
 ```
+
 - run command
+
 ```sh
 stow-config
 ```

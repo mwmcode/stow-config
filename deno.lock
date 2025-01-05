@@ -8,17 +8,28 @@
     "jsr:@cliffy/keycode@1.0.0-rc.7": "1.0.0-rc.7",
     "jsr:@cliffy/prompt@^1.0.0-rc.7": "1.0.0-rc.7",
     "jsr:@cliffy/table@1.0.0-rc.7": "1.0.0-rc.7",
+    "jsr:@cliffy/testing@1.0.0-rc.7": "1.0.0-rc.7",
+    "jsr:@std/assert@*": "1.0.10",
     "jsr:@std/assert@1": "1.0.10",
+    "jsr:@std/assert@^1.0.10": "1.0.10",
+    "jsr:@std/assert@^1.0.2": "1.0.10",
     "jsr:@std/assert@~1.0.6": "1.0.10",
     "jsr:@std/cli@*": "1.0.9",
     "jsr:@std/cli@^1.0.9": "1.0.9",
+    "jsr:@std/data-structures@^1.0.5": "1.0.5",
     "jsr:@std/encoding@~1.0.5": "1.0.6",
     "jsr:@std/fmt@~1.0.2": "1.0.3",
+    "jsr:@std/fs@^1.0.1": "1.0.8",
+    "jsr:@std/fs@^1.0.8": "1.0.8",
+    "jsr:@std/internal@^1.0.1": "1.0.5",
     "jsr:@std/internal@^1.0.5": "1.0.5",
     "jsr:@std/io@~0.224.9": "0.224.9",
     "jsr:@std/path@*": "1.0.8",
+    "jsr:@std/path@^1.0.2": "1.0.8",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "jsr:@std/path@~1.0.6": "1.0.8",
+    "jsr:@std/testing@1.0.0": "1.0.0",
+    "jsr:@std/testing@^1.0.8": "1.0.8",
     "jsr:@std/text@~1.0.7": "1.0.9",
     "npm:@types/node@*": "22.5.4"
   },
@@ -28,6 +39,7 @@
       "dependencies": [
         "jsr:@cliffy/internal",
         "jsr:@std/encoding",
+        "jsr:@std/fmt",
         "jsr:@std/io"
       ]
     },
@@ -48,7 +60,10 @@
       ]
     },
     "@cliffy/internal@1.0.0-rc.7": {
-      "integrity": "10412636ab3e67517d448be9eaab1b70c88eba9be22617b5d146257a11cc9b17"
+      "integrity": "10412636ab3e67517d448be9eaab1b70c88eba9be22617b5d146257a11cc9b17",
+      "dependencies": [
+        "jsr:@std/fmt"
+      ]
     },
     "@cliffy/keycode@1.0.0-rc.7": {
       "integrity": "5b3f6c33994e81a76b79f108b1989642ac22705840da33781f7972d7dff05503"
@@ -72,20 +87,39 @@
         "jsr:@std/fmt"
       ]
     },
+    "@cliffy/testing@1.0.0-rc.7": {
+      "integrity": "2e46e2a6c206c0aab5688ab759854946d338a214ac3e1b84b6e73b73985ce958",
+      "dependencies": [
+        "jsr:@cliffy/ansi",
+        "jsr:@cliffy/internal",
+        "jsr:@std/assert@~1.0.6",
+        "jsr:@std/fmt",
+        "jsr:@std/testing@1.0.0"
+      ]
+    },
     "@std/assert@1.0.10": {
       "integrity": "59b5cbac5bd55459a19045d95cc7c2ff787b4f8527c0dd195078ff6f9481fbb3",
       "dependencies": [
-        "jsr:@std/internal"
+        "jsr:@std/internal@^1.0.5"
       ]
     },
     "@std/cli@1.0.9": {
       "integrity": "557e5865af000efbf3f737dcfea5b8ab86453594f4a9cd8d08c9fa83d8e3f3bc"
+    },
+    "@std/data-structures@1.0.5": {
+      "integrity": "86dd5c2d6365a6ad56e9103b3a877c5d5ade238c68ae463acfe0eb0e56d40783"
     },
     "@std/encoding@1.0.6": {
       "integrity": "ca87122c196e8831737d9547acf001766618e78cd8c33920776c7f5885546069"
     },
     "@std/fmt@1.0.3": {
       "integrity": "97765c16aa32245ff4e2204ecf7d8562496a3cb8592340a80e7e554e0bb9149f"
+    },
+    "@std/fs@1.0.8": {
+      "integrity": "161c721b6f9400b8100a851b6f4061431c538b204bb76c501d02c508995cffe0",
+      "dependencies": [
+        "jsr:@std/path@^1.0.8"
+      ]
     },
     "@std/internal@1.0.5": {
       "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
@@ -95,6 +129,25 @@
     },
     "@std/path@1.0.8": {
       "integrity": "548fa456bb6a04d3c1a1e7477986b6cffbce95102d0bb447c67c4ee70e0364be"
+    },
+    "@std/testing@1.0.0": {
+      "integrity": "27cfc06392c69c2acffe54e6d0bcb5f961cf193f519255372bd4fff1481bfef8",
+      "dependencies": [
+        "jsr:@std/assert@^1.0.2",
+        "jsr:@std/fs@^1.0.1",
+        "jsr:@std/internal@^1.0.1",
+        "jsr:@std/path@^1.0.2"
+      ]
+    },
+    "@std/testing@1.0.8": {
+      "integrity": "ceef535808fb7568e91b0f8263599bd29b1c5603ffb0377227f00a8ca9fe42a2",
+      "dependencies": [
+        "jsr:@std/assert@^1.0.10",
+        "jsr:@std/data-structures",
+        "jsr:@std/fs@^1.0.8",
+        "jsr:@std/internal@^1.0.5",
+        "jsr:@std/path@^1.0.8"
+      ]
     },
     "@std/text@1.0.9": {
       "integrity": "b2db4abc3e6ab93eb0280a0d5e126fd3fca80955bcc297ccaaf555e995eab747"
@@ -118,11 +171,15 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@cliffy/ansi@1.0.0-rc.7",
       "jsr:@cliffy/command@^1.0.0-rc.7",
       "jsr:@cliffy/prompt@^1.0.0-rc.7",
+      "jsr:@cliffy/table@1.0.0-rc.7",
+      "jsr:@cliffy/testing@1.0.0-rc.7",
       "jsr:@std/assert@1",
       "jsr:@std/cli@^1.0.9",
-      "jsr:@std/path@^1.0.8"
+      "jsr:@std/path@^1.0.8",
+      "jsr:@std/testing@^1.0.8"
     ]
   }
 }

@@ -1,0 +1,144 @@
+export const snapshot = {};
+
+snapshot[`Prompts user to enter paths for source and destination dirs 1`] = `
+stdout:
+'? Enter path to \`configs\` directory › \\x1b[39G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch\\x1b[47G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer\\x1b[55G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno\\x1b[63G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config\\x1b[71G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test\\x1b[79G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[87G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[95G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src
+\\x1b[?25h\\x1b[?25h\\x1b[?25h
+
+? Enter path to \`destination\` directory › \\x1b[43G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch\\x1b[51G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer\\x1b[59G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno\\x1b[67G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config\\x1b[75G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test\\x1b[83G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[91G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest\\x1b[99G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest
+\\x1b[?25h\\x1b[?25h\\x1b[?25h
+
+? Pick config file(s) Type to filter 🔎 
+❯ ✘ .zshrc
+  ✘ starship.toml
+  ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+❯ ✔ .zshrc
+  ✘ starship.toml
+  ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+❯ ✘ starship.toml
+  ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+❯ ✔ starship.toml
+  ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+  ✔ starship.toml
+❯ ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+  ✔ starship.toml
+❯ ✔ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+  ✔ starship.toml
+  ✔ .prettierrc.js
+❯ ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) › .zshrc, starship.toml, .prettierrc.js, git
+\\x1b[?25h\\x1b[?25h\\x1b[?25h{
+  configDir: "/Users/mch/Developer/deno/stow-config/test/data/config-src",
+  destDir: "/Users/mch/Developer/deno/stow-config/test/data/config-dest",
+  pickConfigs: [ ".zshrc", "starship.toml", ".prettierrc.js", "git" ]
+}
+'
+stderr:
+""
+`;
+
+snapshot[`Moves config files from src to dest, and creates symlinks 1`] = `
+stdout:
+"? Enter path to \`configs\` directory › \\x1b[39G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch\\x1b[47G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer\\x1b[55G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno\\x1b[63G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config\\x1b[71G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test\\x1b[79G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[87G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[95G\\x1b[G\\x1b[0J
+? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src
+\\x1b[?25h\\x1b[?25h\\x1b[?25h
+
+? Enter path to \`destination\` directory › \\x1b[43G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch\\x1b[51G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer\\x1b[59G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno\\x1b[67G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config\\x1b[75G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test\\x1b[83G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src\\x1b[91G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest\\x1b[99G\\x1b[G\\x1b[0J
+? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest
+\\x1b[?25h\\x1b[?25h\\x1b[?25h
+
+? Pick config file(s) Type to filter 🔎 
+❯ ✘ .zshrc
+  ✘ starship.toml
+  ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+❯ ✔ .zshrc
+  ✘ starship.toml
+  ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+❯ ✘ starship.toml
+  ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+❯ ✔ starship.toml
+  ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+  ✔ starship.toml
+❯ ✘ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+  ✔ starship.toml
+❯ ✔ .prettierrc.js
+  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) Type to filter 🔎 
+  ✔ .zshrc
+  ✔ starship.toml
+  ✔ .prettierrc.js
+❯ ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
+? Pick config file(s) › .zshrc, starship.toml, .prettierrc.js, git
+\\x1b[?25h\\x1b[?25h\\x1b[?25h
+✅ done!
+
+🔗 /Users/mch/Developer/deno/stow-config/test/data/config-src/.zshrc         @-> /Users/mch/Developer/deno/stow-config/test/data/config-dest/.zshrc        
+🔗 /Users/mch/Developer/deno/stow-config/test/data/config-src/starship.toml  @-> /Users/mch/Developer/deno/stow-config/test/data/config-dest/starship.toml 
+🔗 /Users/mch/Developer/deno/stow-config/test/data/config-src/.prettierrc.js @-> /Users/mch/Developer/deno/stow-config/test/data/config-dest/.prettierrc.js
+🔗 /Users/mch/Developer/deno/stow-config/test/data/config-src/git            @-> /Users/mch/Developer/deno/stow-config/test/data/config-dest/git           
+undefined
+"
+stderr:
+""
+`;
