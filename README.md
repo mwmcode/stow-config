@@ -1,12 +1,15 @@
 [![Publish](https://github.com/mwmcode/stow-config/actions/workflows/publish.yml/badge.svg)](https://github.com/mwmcode/stow-config/actions/workflows/publish.yml)
 
 # Stow Config
-https://github.com/user-attachments/assets/92310e2f-7cd4-45af-b472-a606bcd48e6e
+<video controls width="600">
+  <source src="screenshots/stow_demo.mov" type="video/mov">
+</video>
+
 
 ### About
 1. moves selected config files/directories (aka _dotfiles_) from `📂 source/` to `📂 target/`
 2. creates 🔗 symlinks for them 👆 instead (example: `📂 source/.zshrc @-> 📂 target/.zshrc`)
-3. now you can track those _dotfiles_ in `📂 target/` using `git` 
+3. now you can track those _dotfiles_ in `📂 target/` using `git`
 
 
 Inspired by [GNU Stow](https://www.gnu.org/software/stow/)
