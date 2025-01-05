@@ -11,7 +11,11 @@ Inspired by [GNU Stow](https://www.gnu.org/software/stow/)
 
 ### Installation
 ```sh
-deno install --global --allow-read --allow-write --allow-env=HOME --name stow jsr:@mcha/stow-config
+deno install --global \
+    --allow-read --allow-write \
+    --allow-env=HOME \
+    --name stow \
+    jsr:@mcha/stow-config
 ```
 - `--allow-read --allow-write` to move configuration files and create symlinks for them.
 - `--allow-env=HOME` to allow for paths that start with `~`, such as `~/.config`.
