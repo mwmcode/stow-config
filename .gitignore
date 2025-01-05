@@ -3,7 +3,7 @@
 .deno/*
 .npmrc
 
-.vscode/
+.vscode/*
 !.vscode/settings.json
 
 node_modules

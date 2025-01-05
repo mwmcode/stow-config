@@ -1,12 +1,12 @@
 {
   "name": "@mcha/stow-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "exports": "./main.ts",
   "tasks": {
-    "stow": "deno run -R -W main.ts",
+    "stow": "deno run --allow-env=HOME -R -W main.ts",
     "format": "deno fmt",
-    "test": "deno test -R -W --allow-run  test/*.test.ts"
+    "test": "deno test --allow-env=HOME -R -W --allow-run  test/*.test.ts"
   },
   "imports": {
     "@cliffy/ansi": "jsr:@cliffy/ansi@1.0.0-rc.7",
