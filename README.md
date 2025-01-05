@@ -4,20 +4,26 @@
 
 Like [GNU Stow](https://www.gnu.org/software/stow/)
 
-
-- install it
+### Installation
 ```sh
-deno install --global -R -W --allow-env=HOME --name stow jsr:@mcha/stow-config
+deno install --global --allow-read --allow-write --allow-env=HOME --name stow jsr:@mcha/stow-config
 ```
-> `-R`, `-W` to move config files and create symlinks for them;
-> `--allow-env=HOME` to facilitate paths like `~/.config`
-> `--name stow` you can name it something else, like `--name stow-configs`)
+- `--allow-read --allow-write` are used to move configuration files and create symlinks for them.
+- `--allow-env=HOME` is used to allow for paths that start with `~`, such as `~/.config`.
+- `--name stow` can be set to something else, like `--name stow-configs`.
 
-
-- run it
+### Usage
 > make sure `$HOME/.deno/bin` is in `$PATH`:
 ```sh
 stow
 ```
+![stow command prompts](./screenshots/stow_command.png 'stow command prompts').
 
-- TBC.
+![config dir contains symlinks instead of acutaly files/dirs](./screenshots/result_config_dir.png 'config dir result').
+
+
+### Uninstall
+```sh
+deno uninstall --global stow
+```
+_assuming it was installed with `--name stow`_
