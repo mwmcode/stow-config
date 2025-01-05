@@ -1,7 +1,11 @@
 [![Publish](https://github.com/mwmcode/stow-config/actions/workflows/publish.yml/badge.svg)](https://github.com/mwmcode/stow-config/actions/workflows/publish.yml)
 
 # Stow Config
-![](./screenshots/stow_demo.mov 'demo').
+![](./screenshots/stow_demo.mp4 'demo')
+
+<video controls width="600">
+  <source src="screenshots/stow_demo.mp4" type="video/mp4">
+</video>
 
 ### About
 1. moves selected config files/directories (aka _dotfiles_) from `📂 source/` to `📂 target/`
