@@ -23,7 +23,7 @@
   "fmt": {
     "include": ["./src/", "main.ts"],
     "useTabs": false,
-    "lineWidth": 80,
+    "lineWidth": 120,
     "indentWidth": 2,
     "semiColons": true,
     "singleQuote": true,

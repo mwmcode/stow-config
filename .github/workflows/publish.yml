@@ -17,7 +17,6 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
@@ -28,7 +27,7 @@ jobs:
 
       - name: Format
         run: deno task format
-      
+
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v5
 

@@ -18,16 +18,12 @@ export async function runPrompt() {
       transform: normalize,
       after: async ({ configDir }, next) => {
         configDir = configDir as string;
-        const configsDirFullpath = normalize(configDir);
+
         const dirValidatoin = validateDirInput(configDir);
         if (dirValidatoin === 'is-directory') {
-          for await (
-            const { isSymlink, name } of Deno.readDir(
-              configsDirFullpath,
-            )
-          ) {
-            if (isSymlink) continue;
-            configFiles.push({ name, value: name });
+          for await (const config of Deno.readDir(normalize(configDir))) {
+            if (config.isSymlink) continue;
+            configFiles.push({ name: config.name, value: config.name });
           }
           if (!configFiles.length) {
             logger.error(`${logger.underline(configDir)} contains no configs!`);
