@@ -24,42 +24,42 @@ stdout:
 ? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest
 \\x1b[?25h\\x1b[?25h\\x1b[?25h
 
-? Pick config file(s) Type to filter 🔎 
+? Select config(s) (type to filter 🔎) 
 ❯ ✘ .zshrc
   ✘ starship.toml
   ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
 ❯ ✔ .zshrc
   ✘ starship.toml
   ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
 ❯ ✘ starship.toml
   ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
 ❯ ✔ starship.toml
   ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
   ✔ starship.toml
 ❯ ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
   ✔ starship.toml
 ❯ ✔ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
   ✔ starship.toml
   ✔ .prettierrc.js
-❯ ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) › .zshrc, starship.toml, .prettierrc.js, git
+❯ ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) › .zshrc, starship.toml, .prettierrc.js, git
 \\x1b[?25h\\x1b[?25h\\x1b[?25h{
   configDir: "/Users/mch/Developer/deno/stow-config/test/data/config-src",
   destDir: "/Users/mch/Developer/deno/stow-config/test/data/config-dest",
@@ -94,42 +94,42 @@ stdout:
 ? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest
 \\x1b[?25h\\x1b[?25h\\x1b[?25h
 
-? Pick config file(s) Type to filter 🔎 
+? Select config(s) (type to filter 🔎) 
 ❯ ✘ .zshrc
   ✘ starship.toml
   ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
 ❯ ✔ .zshrc
   ✘ starship.toml
   ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
 ❯ ✘ starship.toml
   ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
 ❯ ✔ starship.toml
   ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
   ✔ starship.toml
 ❯ ✘ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
   ✔ starship.toml
 ❯ ✔ .prettierrc.js
-  ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) Type to filter 🔎 
+  ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) (type to filter 🔎) 
   ✔ .zshrc
   ✔ starship.toml
   ✔ .prettierrc.js
-❯ ✘ git\\x1b[4A\\x1b[41G\\x1b[G\\x1b[0J
-? Pick config file(s) › .zshrc, starship.toml, .prettierrc.js, git
+❯ ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
+? Select config(s) › .zshrc, starship.toml, .prettierrc.js, git
 \\x1b[?25h\\x1b[?25h\\x1b[?25h
 ✅ done!
 
