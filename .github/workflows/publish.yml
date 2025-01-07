@@ -1,4 +1,4 @@
-name: Publish
+name: Pipeline
 on:
   push:
     branches:
@@ -9,11 +9,14 @@ jobs:
     runs-on: macos-latest
 
     permissions:
-      contents: read
+      contents: write
       id-token: write
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
 
       - name: Install Deno
         uses: denoland/setup-deno@v2
@@ -25,6 +28,9 @@ jobs:
 
       - name: Format
         run: deno task format
+      
+      # Commit all changed files back to the repository
+      - uses: stefanzweifel/git-auto-commit-action@v5
 
       - name: Publish package
         run: deno publish
