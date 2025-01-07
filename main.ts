@@ -11,7 +11,7 @@ const { options } = await new Command()
   .name('stow')
   .description('Run it without argument options to start')
   .option('-v, --version', 'Display version')
-  .action(async options => {
+  .action(async (options) => {
     if (!options.version) return;
     const module = await import('./deno.json', { with: { type: 'json' } });
     console.log('jsr:@mcha/stow-config', logger.bold(module.default.version));
