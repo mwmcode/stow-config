@@ -5,13 +5,13 @@ stdout:
 '? Enter path to \`configs\` directory › \\x1b[39G\\x1b[G\\x1b[0J
 ? Enter path to \`configs\` directory › test/data\\x1b[47G\\x1b[G\\x1b[0J
 ? Enter path to \`configs\` directory › test/data/config-src\\x1b[55G\\x1b[G\\x1b[0J
-? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src
+? Enter path to \`configs\` directory › test/data/config-src
 \\x1b[?25h\\x1b[?25h\\x1b[?25h
 
 ? Enter path to \`destination\` directory › \\x1b[43G\\x1b[G\\x1b[0J
 ? Enter path to \`destination\` directory › test/data\\x1b[51G\\x1b[G\\x1b[0J
 ? Enter path to \`destination\` directory › test/data/config-src\\x1b[59G\\x1b[G\\x1b[0J
-? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest
+? Enter path to \`destination\` directory › test/data/config-dest
 \\x1b[?25h\\x1b[?25h\\x1b[?25h
 
 ? Select config(s) (type to filter 🔎) 
@@ -51,8 +51,8 @@ stdout:
 ❯ ✘ git\\x1b[4A\\x1b[40G\\x1b[G\\x1b[0J
 ? Select config(s) › .zshrc, starship.toml, .prettierrc.js, git
 \\x1b[?25h\\x1b[?25h\\x1b[?25h{
-  configDir: "/Users/mch/Developer/deno/stow-config/test/data/config-src",
-  destDir: "/Users/mch/Developer/deno/stow-config/test/data/config-dest",
+  configDir: "test/data/config-src",
+  destDir: "test/data/config-dest",
   pickConfigs: [ ".zshrc", "starship.toml", ".prettierrc.js", "git" ]
 }
 '
@@ -65,13 +65,13 @@ stdout:
 "? Enter path to \`configs\` directory › \\x1b[39G\\x1b[G\\x1b[0J
 ? Enter path to \`configs\` directory › test/data\\x1b[47G\\x1b[G\\x1b[0J
 ? Enter path to \`configs\` directory › test/data/config-src\\x1b[55G\\x1b[G\\x1b[0J
-? Enter path to \`configs\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-src
+? Enter path to \`configs\` directory › test/data/config-src
 \\x1b[?25h\\x1b[?25h\\x1b[?25h
 
 ? Enter path to \`destination\` directory › \\x1b[43G\\x1b[G\\x1b[0J
 ? Enter path to \`destination\` directory › test/data\\x1b[51G\\x1b[G\\x1b[0J
 ? Enter path to \`destination\` directory › test/data/config-src\\x1b[59G\\x1b[G\\x1b[0J
-? Enter path to \`destination\` directory › /Users/mch/Developer/deno/stow-config/test/data/config-dest
+? Enter path to \`destination\` directory › test/data/config-dest
 \\x1b[?25h\\x1b[?25h\\x1b[?25h
 
 ? Select config(s) (type to filter 🔎) 
@@ -113,10 +113,10 @@ stdout:
 \\x1b[?25h\\x1b[?25h\\x1b[?25h
 ✅ done!
 
-🔗 /Users/mch/Developer/deno/stow-config/test/data/config-src/.zshrc         @-> /Users/mch/Developer/deno/stow-config/test/data/config-dest/.zshrc        
-🔗 /Users/mch/Developer/deno/stow-config/test/data/config-src/starship.toml  @-> /Users/mch/Developer/deno/stow-config/test/data/config-dest/starship.toml 
-🔗 /Users/mch/Developer/deno/stow-config/test/data/config-src/.prettierrc.js @-> /Users/mch/Developer/deno/stow-config/test/data/config-dest/.prettierrc.js
-🔗 /Users/mch/Developer/deno/stow-config/test/data/config-src/git            @-> /Users/mch/Developer/deno/stow-config/test/data/config-dest/git           
+🔗 test/data/config-src/.zshrc         @-> test/data/config-dest/.zshrc        
+🔗 test/data/config-src/starship.toml  @-> test/data/config-dest/starship.toml 
+🔗 test/data/config-src/.prettierrc.js @-> test/data/config-dest/.prettierrc.js
+🔗 test/data/config-src/git            @-> test/data/config-dest/git           
 undefined
 "
 stderr:
