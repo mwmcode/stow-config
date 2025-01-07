@@ -10,7 +10,8 @@ const { options } = await new Command()
   .name('stow')
   .description('Run it without argument options to start')
   .option('-v, --version', 'Display version')
-  .action(async () => {
+  .action(async (options: { v: boolean; version: boolean }) => {
+    if (!options.v && !options.version) return;
     const module = await import('./deno.json', {
       with: { type: 'json' },
     });

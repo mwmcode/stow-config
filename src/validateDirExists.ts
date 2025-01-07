@@ -1,8 +1,8 @@
-import { isAbsolute, join, normalize } from '@std/path';
+// import { isAbsolute, join, normalize } from '@std/path';
 
-export function getFullPath(input: string) {
-  return isAbsolute(input) ? input : join(Deno.cwd(), normalize(input));
-}
+// export function getFullPath(input: string) {
+//   return isAbsolute(input) ? input : join(Deno.cwd(), normalize(input));
+// }
 
 /**
  * @returns ```
